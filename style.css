@@ -1,218 +1,275 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+}
+.slidershow{
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+.middle{
+  position: absolute;
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%);
+}
+.navigation{
+  position:absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.45;
+}
+.bar:hover{
+  background: #fff;
+}
+input{name="r"}{
+  position: absolute;
+  visibility: hidden;
+}
+.slides{
+  width: 20%;
+  transition: 0.06s;
+}
+.slides img{
+  width :100%;
+  height: 100%;
+}
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+#r6:checked ~ .s1{
+  margin-left: -100%;
+}
 
-body {
-    font-size: 15px;
-  }
-  
-  button {
-    background: #ffc600;
-    border: 0;
-    padding: 10px 20px;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  /* .wrapper */
-  
-  .wrapper {
-    display: grid;
-    grid-gap: 20px;
-  }
-  
-  .top {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-      "hero hero cta1"
-      "hero hero cta2"
-  }
-  
-  .hero {
-    grid-area: hero;
-    min-height: 400px;
-    background: white url(images/taco.jpg);
-    background-size: cover;
-    background-position: bottom right;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-  }
-  
-  .hero > * {
-    background: var(--yellow);
-    padding: 5px;
-  }
-  
-  .cta {
-    background: var(--yellow);
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-  }
-  
-  .cta p {
-    margin: 0;
-  }
-  
-  .cta1 {
-    grid-area: cta1;
-  }
-  
-  .cta2 {
-    grid-area: cta2;
-  }
-  
-  .price {
-    font-size: 60px;
-    font-weight: 300;
-  }
-  
-  /* Navigation */
-  
-  .menu ul {
-    display: grid;
-    grid-gap: 10px;
-    padding: 0;
-    list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-  
-  .menu a {
-    background: var(--yellow);
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    color: var(--black);
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-  
-  [aria-controls="menu-list"] {
+
+
+
+
+
+
+
+<!-------social media logos ------------------>
+ul{
+  margin:0px;
+  padding: 0px;
+  list-style: none;
+}
+ul li{
+  float: right;
+  position: relative;
+  left: 30px;
+  width: 200px;
+  height:40px;
+  background-color: none;
+  opacity: .8;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.6s ease;
+  transforn::translate(-50%,50%);
+
+}
+
+ul li a{
+  text-decoration: none;
+  color:black;
+  display: block;
+  border: 1px solid transparent;
+}
+ul li a:hover{
+   background-color:whitea;
+}
+ul li ul li {
     display: none;
-  }
-  
-  /* Features! */
-  
-  .features {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .feature {
-    background: white;
-    padding: 10px;
-    border: 1px solid white;
+}
+ ul li:hover ul li {
+     display: block;
+
+ }
+ .title{
+  position: absolute;
+  top:50%;
+  left: 40%;
+  transform:translate(-50%,-50%);
+}
+.title{
+  color:white;
+  font-size: 30px;
+}
+
+.button{
+  position: absolute;
+  top:70%;
+  left: 20%;
+  transform:translate(-50%,-50%);
+
+}
+
+.btn{
+  border: 1px solid white;
+  padding:10px 30px;
+  color:white;
+  text-decoration: none;
+  transition: 0.6s ease;
+
+}
+
+.btn:hover{
+  background-color: white;
+  color:black;
+}
+@media screen and (max-width:500px){
+  .topnav a{
+    float:none;
+    display: none;
     text-align: center;
-    box-shadow: 0 0 4px  rgba(0,0,0,0.1);
   }
-  
-  .feature .icon {
-    font-size: 50px;
+}
+{
+  background: #d8d8d8;
+}
+.social-menu ul {
+  position: absolute;
+  top:50%;
+  left:50%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+.social-menu ul li .fa{
+  font-size: 30px;
+  line-height: 60px;
+  transition: .6%;
+  color: #000;
+}
+.social-menu ul li .fa {
+  background-color: #fff;
+}
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition:v.6%;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+.social-menu ul li  a:hover {
+  transform: translate(0,-10px);
+}
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(4) a:hover{
+  background-color: #cd201f;
+}
+
+<!-----------------FOOTAR CSS-------->
+
+/* ----------------Footer 3 sections Started------------------- */
+#readmorelinkfotter { color: #FF0000; }
+* {
+box-sizing: border-box;
   }
-  .feature p {
-    color: rgba(0,0,0,0.5);
-  }
-  
-  /* About Section */
-  
-  .about {
-    background: white;
-    padding:50px;
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    align-items: center;
-  }
-  
-  /* Gallery! */
-  
-  .gallery {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .gallery img {
-    width: 100%;
-  }
-  
-  .gallery h2 {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-gap: 20px;
-    align-items: center;
-  }
-  
-  .gallery h2:before, .gallery h2:after {
-    display: block;
-    content: '';
-    height: 10px;
-    background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
-  }
-  
-  .gallery h2:after {
-    --direction: right;
-  }
-  
-  @media (max-width: 1000px) {
-    .menu {
-      perspective: 800px;
-    }
-    [aria-controls="menu-list"] {
-      display: block;
-      margin-bottom: 10px;
-    }
-  
-    .menu ul {
-      max-height: 0;
-      overflow: hidden;
-      transform: rotateX(90deg);
-      transition: all 0.5s;
-    }
-  
-    [aria-expanded="true"] ~ ul {
-      display: grid;
-      max-height: 500px;
-      transform: rotateX(0);
-    }
-  
-    [aria-expanded="false"] .close {
-      display: none;
-    }
-  
-    [aria-expanded="true"] .close {
-      display: inline-block;
-    }
-  
-    [aria-expanded="true"] .open {
-      display: none;
-    }
-  
-  }
-  
-  @media (max-width: 700px) {
-    .top {
-      grid-template-areas:
-        "hero hero"
-        "cta1 cta2"
-    }
-    /* About */
-    .about {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .top {
-      grid-template-areas:
-        "hero"
-        "cta1"
-        "cta2"
-    }
-  }
+
+/* Create three equal columns that floats next to each other */
+.column {
+float: left;
+width: 33.33%;
+padding: 10px;
+height: 300px; /* Should be removed. Only for demonstration */
+color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* ----------------Footer 3 sections Ended------------------- */
+/* Main Fotter */
+.all-browsers {
+margin: 0;
+padding: 5px;
+background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+margin: 10px;
+padding: 5px;
+}
+
+.browser {
+background: white;
+}
+
+.browser > h2, p {
+margin: 4px;
+font-size: 90%;
+}
+
+footer {
+text-align: center;
+padding: 3px;
+background-color: rgb(24, 24, 24);
+color: white;
+}
+/* Main Fotter end */
+
+/*Footer 2/3 Code */
+/* unvisited link */
+#footerhelplink a:link {
+color: gray;
+}
+
+/* visited link */
+#footerhelplink a:visited {
+color: green;
+}
+
+/* mouse over link */
+#footerhelplink a:hover {
+color: #fb4400;
+}
+
+/* selected link */
+#footerhelplink a:active {
+color: yellow;
+}
+/* Footer 2/3 Code */
